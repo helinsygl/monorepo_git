@@ -1,0 +1,7 @@
+FROM golang:1.24-alpine3.20
+WORKDIR /app
+COPY . .
+RUN go build -o hello-app
+ENTRYPOINT ["./hello-app"]
+#for build and run
+#docker build -t hello-go-app , docker run -rm hello-go-app
