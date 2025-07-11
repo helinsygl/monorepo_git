@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"meta.helm.sh/release-name":"jenkins","meta.helm.sh/release-namespace":"jenkins"},"creationTimestamp":"2025-07-08T07:17:33Z","labels":{"app.kubernetes.io/component":"jenkins-controller","app.kubernetes.io/instance":"jenkins","app.kubernetes.io/managed-by":"Helm","app.kubernetes.io/name":"jenkins","helm.sh/chart":"jenkins-5.8.66"},"name":"jenkins","namespace":"jenkins","resourceVersion":"72181","uid":"7c6b89c4-6925-485a-8fdd-2877ab61684b"},"spec":{"clusterIP":"10.110.14.150","clusterIPs":["10.110.14.150"],"internalTrafficPolicy":"Cluster","ipFamilies":["IPv4"],"ipFamilyPolicy":"SingleStack","ports":[{"name":"http","port":8080,"protocol":"TCP","targetPort":8080}],"selector":{"app.kubernetes.io/component":"jenkins-controller","app.kubernetes.io/instance":"jenkins"},"sessionAffinity":"None","type":"ClusterIP"},"status":{"loadBalancer":{}}}
+    meta.helm.sh/release-name: jenkins
+    meta.helm.sh/release-namespace: jenkins
+  creationTimestamp: "2025-07-08T07:17:33Z"
+  labels:
+    app.kubernetes.io/component: jenkins-controller
+    app.kubernetes.io/instance: jenkins
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: jenkins
+    helm.sh/chart: jenkins-5.8.66
+  name: jenkins
+  namespace: jenkins
+  resourceVersion: "81526"
+  uid: 7c6b89c4-6925-485a-8fdd-2877ab61684b
+spec:
+  clusterIP: 10.110.14.150
+  clusterIPs:
+  - 10.110.14.150
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: http
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app.kubernetes.io/component: jenkins-controller
+    app.kubernetes.io/instance: jenkins
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}

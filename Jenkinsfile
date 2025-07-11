@@ -10,9 +10,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'echo "Building the project..."'
-                // Eğer Go projesi ise burada:
-                // sh 'go build -o hello-app'
+                sh 'cd app && go build -o app'
+            }
+        }
+
+        stage('Docker Build') {
+            steps {
+                sh 'docker build -t hello-app .'
             }
         }
     }
